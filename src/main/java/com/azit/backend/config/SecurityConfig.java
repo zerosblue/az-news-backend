@@ -63,7 +63,9 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:5173")); // 리액트 주소
+        config.setAllowedOrigins(List.of("http://localhost:5173",
+                "https://az-news-frontend-dnauu5jrm-backsoo-kims-projects.vercel.app" // ★ Vercel 주소 추가!
+        ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
