@@ -18,6 +18,6 @@ public class OAuth2LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHan
         System.out.println("✅ 구글 로그인 성공! 프론트엔드로 이동합니다.");
 
         // 로그인 성공 후 리액트(5173) 홈으로 강제 이동
-        getRedirectStrategy().sendRedirect(request, response, "http://localhost:5173/");
+        response.sendRedirect("https://az-news-frontend-dnauu5jrm-backsoo-kims-projects.vercel.app/");
     }
 }
